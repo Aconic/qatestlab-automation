@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -14,9 +13,7 @@ public class SearchPageTest
     {
         ChromeDriverManager.getInstance().setup();
         WebDriver chromeDriver = new ChromeDriver();
-
         chromeDriver.get("http://bing.com");
-        WebDriverWait driverWait = new WebDriverWait(chromeDriver,1);
 
         WebElement searchField = chromeDriver.findElement(By.className("b_searchbox"));
         searchField.sendKeys("Automation");
